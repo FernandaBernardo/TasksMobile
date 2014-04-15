@@ -17,8 +17,8 @@ public class FormularioActivity extends Activity{
 		setContentView(R.layout.formulario);
 		
 		Button botao = (Button) findViewById(R.id.botao);
+		
 		botao.setOnClickListener(new OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				Task task = new Task();
