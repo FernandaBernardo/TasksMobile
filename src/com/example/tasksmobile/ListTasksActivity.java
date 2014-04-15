@@ -50,6 +50,15 @@ public class ListTasksActivity extends Activity {
 			});
 		tasksView.setOnTouchListener(touchListener);
         tasksView.setOnScrollListener(touchListener.makeScrollListener());
+        
+        tasksView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapter, View view, int pos, long id) {
+				Intent description = new Intent(ListTasksActivity.this, TaskDescriptionActivity.class);
+				description.putExtra("task", tasks.get(pos));
+				startActivity(description);
+			}
+		});
     }
 
 	@Override

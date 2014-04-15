@@ -26,6 +26,10 @@
             android:name="com.example.tasksmobile.FormularioActivity"
             android:label="@string/formulario" >
         </activity>
+        <activity
+            android:name="com.example.tasksmobile.TaskDescriptionActivity"
+            android:label="@string/description" >
+        </activity>
     </application>
 
 </manifest>

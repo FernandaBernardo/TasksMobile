@@ -1,7 +1,9 @@
 package com.example.tasksmobile.model;
 
+import java.io.Serializable;
 
-public class Task {
+
+public class Task implements Serializable{
 	private Long id;
 	private String nome;
 	private String materia;
