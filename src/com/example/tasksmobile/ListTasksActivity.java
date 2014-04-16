@@ -20,7 +20,7 @@ import com.example.tasksmobile.swipe.SwipeTouchListener;
 
 public class ListTasksActivity extends Activity {
 
-	private ArrayAdapter<String> adapter;
+	private ListTasksAdapter adapter;
 	private ListView tasksView;
 	private List<Task> tasks;
 
@@ -70,14 +70,9 @@ public class ListTasksActivity extends Activity {
 	private void carregaLista() {
 		TaskDao dao = new TaskDao(this);
 		tasks = dao.getLista();
-		List<String> names = new ArrayList<String>();
-		for (Task task : tasks) {
-			names.add(task.getNome());
-		}
 
 		dao.close();
-		adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, names);
+		adapter = new ListTasksAdapter(this, tasks);
 		tasksView.setAdapter(adapter);
 	}
 
