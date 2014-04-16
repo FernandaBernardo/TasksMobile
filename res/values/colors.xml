@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<color name="linha_par">#CCC</color>
+	<color name="vermelho">#FF0000</color>
+	<color name="amarelo">#FFEE00</color>
+	<color name="verde">#00CC00</color>
+	<color name="azul">#1531AE</color>
+	<color name="laranja">#FF7100</color>
+	<color name="rosa">#DB0058</color>
 </resources>

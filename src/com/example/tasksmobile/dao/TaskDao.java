@@ -87,5 +87,4 @@ public class TaskDao extends SQLiteOpenHelper{
 		values.put("data", task.getData());
 		return values;
 	}
-	
 }

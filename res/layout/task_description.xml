@@ -4,4 +4,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nome_desc"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:text="Matéria:"
+		android:textAlignment="center"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/materia_desc"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:text="Data::"
+		android:textAlignment="center"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/data_desc"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:text="Descrição:"
+		android:textAlignment="center"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descricao_desc"/>
+    
 </LinearLayout>
