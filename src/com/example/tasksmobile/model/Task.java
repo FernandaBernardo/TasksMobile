@@ -1,6 +1,7 @@
 package com.example.tasksmobile.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 
 public class Task implements Serializable{
@@ -30,6 +31,16 @@ public class Task implements Serializable{
 	}
 	public String getData() {
 		return data;
+	}
+	public Date getDate() {
+		String[] split = data.split("/");
+		Date novaData = new Date();
+		novaData.setDate(Integer.parseInt(split[0]));
+		novaData.setMonth(Integer.parseInt(split[1]));
+		if(split.length > 2) {
+			novaData.setYear(Integer.parseInt(split[2]));
+		}
+		return novaData;
 	}
 	public void setData(String data) {
 		this.data = data;

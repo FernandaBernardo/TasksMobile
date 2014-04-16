@@ -1,6 +1,5 @@
 package com.example.tasksmobile;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -11,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.tasksmobile.dao.TaskDao;
@@ -69,7 +67,7 @@ public class ListTasksActivity extends Activity {
 
 	private void carregaLista() {
 		TaskDao dao = new TaskDao(this);
-		tasks = dao.getLista();
+		tasks = dao.getListaOrdenada();
 
 		dao.close();
 		adapter = new ListTasksAdapter(this, tasks);

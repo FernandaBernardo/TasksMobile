@@ -1,6 +1,8 @@
 package com.example.tasksmobile.dao;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import android.content.ContentValues;
@@ -52,7 +54,7 @@ public class TaskDao extends SQLiteOpenHelper{
 		getWritableDatabase().update(TABELA, values, "id=?", args);
 	}
 	
-	public List<Task> getLista() {
+	public List<Task> getListaOrdenada() {
 		ArrayList<Task> tasks = new ArrayList<Task>();
 		Cursor cursor = getReadableDatabase().query(TABELA, COLUNAS, null, null, null, null, null);
 
@@ -66,6 +68,14 @@ public class TaskDao extends SQLiteOpenHelper{
 			tasks.add(task);
 		}
 		cursor.close();
+		
+		Collections.sort(tasks, new Comparator<Task>() {
+			@Override
+			public int compare(Task t1, Task t2) {
+				return t1.getDate().compareTo(t2.getDate());
+			}
+		});
+		
 		return tasks;
 	}
 

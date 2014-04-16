@@ -38,6 +38,10 @@ public class ListTasksAdapter extends BaseAdapter{
 	public View getView(int pos, View convertView, ViewGroup parent) {
 		View view = activity.getLayoutInflater().inflate(R.layout.list_item, null);
 		
+		if (pos % 2 == 0) {
+			view.setBackgroundColor(activity.getResources().getColor(R.color.linha_par));
+		} 
+		
 		Task task = tasks.get(pos);
 		
 		TextView data = (TextView) view.findViewById(R.id.data);
@@ -45,6 +49,7 @@ public class ListTasksAdapter extends BaseAdapter{
 		
 		data.setText(task.getData());
 		nome.setText(task.getNome());
+		
 		
 		return view;
 	}
